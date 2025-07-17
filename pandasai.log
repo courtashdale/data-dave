@@ -1,0 +1,1148 @@
+2025-07-17 19:56:24 [INFO] Question: What was the average fare people paid?
+
+2025-07-17 19:56:24 [INFO] Running PandasAI with openai LLM...
+2025-07-17 19:56:24 [INFO] Prompt ID: c1b913c5-fb4d-4b3c-9b55-eb4d87c34126
+2025-07-17 19:56:24 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-07-17 19:56:24 [INFO] Executing Step 0: ValidatePipelineInput
+2025-07-17 19:56:24 [INFO] Executing Step 1: CacheLookup
+2025-07-17 19:56:24 [INFO] Executing Step 2: PromptGeneration
+2025-07-17 19:56:24 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+392,1,3,"Padro y Manent, Mr. Julian",female,55.0,8,5,29105,211.3375,E8,Q
+529,1,1,"Andreasson, Mr. Paul Edvin",male,65.0,0,2,11769,26.3875,,
+425,0,2,"Heikkinen, Miss. Laina",female,,2,4,112058,11.2417,C85,C
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What was the average fare people paid?
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-07-17 19:56:24 [INFO] Executing Step 3: CodeGenerator
+2025-07-17 19:56:28 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 19:56:28 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+392,1,3,"Padro y Manent, Mr. Julian",female,55.0,8,5,29105,211.3375,E8,Q
+529,1,1,"Andreasson, Mr. Paul Edvin",male,65.0,0,2,11769,26.3875,,
+425,0,2,"Heikkinen, Miss. Laina",female,,2,4,112058,11.2417,C85,C
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What was the average fare people paid?
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-07-17 19:56:28 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Assuming dfs is already defined and contains the DataFrame
+# Calculate the average fare
+average_fare = dfs[0]['Fare'].mean()
+
+# Declare result var: 
+result = {
+    "type": "number",
+    "value": average_fare
+}
+            ```
+            
+2025-07-17 19:56:28 [INFO] Executing Step 4: CachePopulation
+2025-07-17 19:56:28 [INFO] Executing Step 5: CodeCleaning
+2025-07-17 19:56:28 [INFO] 
+Code running:
+```
+average_fare = dfs[0]['Fare'].mean()
+result = {'type': 'number', 'value': average_fare}
+        ```
+2025-07-17 19:56:28 [INFO] Executing Step 6: CodeExecution
+2025-07-17 19:56:28 [INFO] Executing Step 7: ResultValidation
+2025-07-17 19:56:28 [INFO] Answer: {'type': 'number', 'value': 32.204207968574636}
+2025-07-17 19:56:28 [INFO] Executing Step 8: ResultParsing
+2025-07-17 19:56:45 [INFO] Question: How much more likely was a man to die than a woman?
+
+2025-07-17 19:56:45 [INFO] Running PandasAI with openai LLM...
+2025-07-17 19:56:45 [INFO] Prompt ID: 3e647e01-2ccf-4816-afde-72eca48c9e60
+2025-07-17 19:56:45 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-07-17 19:56:45 [INFO] Executing Step 0: ValidatePipelineInput
+2025-07-17 19:56:45 [INFO] Executing Step 1: CacheLookup
+2025-07-17 19:56:45 [INFO] Executing Step 2: PromptGeneration
+2025-07-17 19:56:45 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+846,0,2,"Bengtsson, Mr. John Viktor",male,5.0,2,3,113796,47.1,A14,
+25,1,3,"Green, Mr. George Henry",male,51.0,4,5,SOTON/O.Q. 392087,7.8292,F4,S
+152,1,1,"Calic, Mr. Petar",female,,5,0,370365,7.75,,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ How much more likely was a man to die than a woman?
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-07-17 19:56:45 [INFO] Executing Step 3: CodeGenerator
+2025-07-17 19:56:54 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 19:56:54 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+846,0,2,"Bengtsson, Mr. John Viktor",male,5.0,2,3,113796,47.1,A14,
+25,1,3,"Green, Mr. George Henry",male,51.0,4,5,SOTON/O.Q. 392087,7.8292,F4,S
+152,1,1,"Calic, Mr. Petar",female,,5,0,370365,7.75,,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ How much more likely was a man to die than a woman?
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-07-17 19:56:54 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Assuming dfs is already defined and contains the DataFrame
+# For demonstration, let's assume dfs[0] is the DataFrame we are working with
+df = dfs[0]
+
+# Calculate the number of male and female passengers who survived and did not survive
+male_stats = df[df['Sex'] == 'male']['Survived'].value_counts()
+female_stats = df[df['Sex'] == 'female']['Survived'].value_counts()
+
+# Extract the number of deaths (Survived = 0) for males and females
+male_deaths = male_stats.get(0, 0)
+female_deaths = female_stats.get(0, 0)
+
+# Calculate the death rates
+if female_deaths > 0:
+    death_ratio = male_deaths / female_deaths
+else:
+    death_ratio = float('inf')  # If no female deaths, men are infinitely more likely to die
+
+# Declare result var
+result = {
+    "type": "number",
+    "value": death_ratio
+}
+
+# Print the result for verification
+print(result)
+            ```
+            
+2025-07-17 19:56:54 [INFO] Executing Step 4: CachePopulation
+2025-07-17 19:56:54 [INFO] Executing Step 5: CodeCleaning
+2025-07-17 19:56:54 [INFO] 
+Code running:
+```
+df = dfs[0]
+male_stats = df[df['Sex'] == 'male']['Survived'].value_counts()
+female_stats = df[df['Sex'] == 'female']['Survived'].value_counts()
+male_deaths = male_stats.get(0, 0)
+female_deaths = female_stats.get(0, 0)
+if female_deaths > 0:
+    death_ratio = male_deaths / female_deaths
+else:
+    death_ratio = float('inf')
+result = {'type': 'number', 'value': death_ratio}
+print(result)
+        ```
+2025-07-17 19:56:54 [INFO] Executing Step 6: CodeExecution
+2025-07-17 19:56:54 [INFO] Executing Step 7: ResultValidation
+2025-07-17 19:56:54 [INFO] Answer: {'type': 'number', 'value': 5.777777777777778}
+2025-07-17 19:56:54 [INFO] Executing Step 8: ResultParsing
+2025-07-17 20:46:19 [INFO] Question: What are the most popular genres?
+2025-07-17 20:46:19 [INFO] Running PandasAI with openai LLM...
+2025-07-17 20:46:19 [INFO] Prompt ID: 4931f757-d49b-4b2f-b6dc-f0f050f966af
+2025-07-17 20:46:19 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-07-17 20:46:19 [INFO] Executing Step 0: ValidatePipelineInput
+2025-07-17 20:46:19 [INFO] Executing Step 1: CacheLookup
+2025-07-17 20:46:20 [INFO] Executing Step 2: PromptGeneration
+2025-07-17 20:46:20 [INFO] Using prompt: <dataframe>
+dfs[0]:5000x9
+Ranking,Album,Artist Name,Release Date,Genres,Descriptors,Average Rating,Number of Ratings,Number of Reviews
+2658.0,Soundtracks,Portishead,19 August 2016,"Mod Revival, New Wave, Post-Punk",,3.71,"9,372",549
+3481.0,The Pearl,Candi Staton,July 1962,"Progressive Folk, Progressive Rock","heavy, technical, progressive, atmospheric, aggressive, male vocals, dense, ominous, complex, passionate",3.84,"4,593",76
+1336.0,In Camera,Oliver Nelson with Eric Dolphy,June 1974,"Progressive Metal, Heavy Metal, US Power Metal","passionate, female vocals, longing, sexual, love, sentimental",3.75,326,68
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What are the most popular genres?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-07-17 20:46:20 [INFO] Executing Step 3: CodeGenerator
+2025-07-17 20:46:28 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 20:46:28 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:5000x9
+Ranking,Album,Artist Name,Release Date,Genres,Descriptors,Average Rating,Number of Ratings,Number of Reviews
+2658.0,Soundtracks,Portishead,19 August 2016,"Mod Revival, New Wave, Post-Punk",,3.71,"9,372",549
+3481.0,The Pearl,Candi Staton,July 1962,"Progressive Folk, Progressive Rock","heavy, technical, progressive, atmospheric, aggressive, male vocals, dense, ominous, complex, passionate",3.84,"4,593",76
+1336.0,In Camera,Oliver Nelson with Eric Dolphy,June 1974,"Progressive Metal, Heavy Metal, US Power Metal","passionate, female vocals, longing, sexual, love, sentimental",3.75,326,68
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What are the most popular genres?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-07-17 20:46:28 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs is already declared and contains the DataFrame
+# Concatenate all DataFrames in the list if there are multiple DataFrames
+df = pd.concat(dfs, ignore_index=True)
+
+# Split the genres and count their occurrences
+genre_counts = df['Genres'].str.split(', ').explode().value_counts()
+
+# Get the top genres
+top_genres = genre_counts.head(10)
+
+# Plotting the top genres
+plt.figure(figsize=(10, 6))
+top_genres.plot(kind='bar', color='skyblue')
+plt.title('Top 10 Most Popular Genres')
+plt.xlabel('Genres')
+plt.ylabel('Number of Albums')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('top_genres_chart.png')
+
+# Declare result var
+result = {
+    "type": "plot",
+    "value": "top_genres_chart.png"
+}
+            ```
+            
+2025-07-17 20:46:28 [INFO] Executing Step 4: CachePopulation
+2025-07-17 20:46:28 [INFO] Executing Step 5: CodeCleaning
+2025-07-17 20:46:28 [INFO] Saving charts to /Users/courtashdale/Desktop/Developer/Learning/streamlit-ai/exports/charts/temp_chart.png
+2025-07-17 20:46:28 [INFO] 
+Code running:
+```
+df = pd.concat(dfs, ignore_index=True)
+genre_counts = df['Genres'].str.split(', ').explode().value_counts()
+top_genres = genre_counts.head(10)
+plt.figure(figsize=(10, 6))
+top_genres.plot(kind='bar', color='skyblue')
+plt.title('Top 10 Most Popular Genres')
+plt.xlabel('Genres')
+plt.ylabel('Number of Albums')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('/Users/courtashdale/Desktop/Developer/Learning/streamlit-ai/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/courtashdale/Desktop/Developer/Learning/streamlit-ai/exports/charts/temp_chart.png'}
+        ```
+2025-07-17 20:46:28 [INFO] Executing Step 6: CodeExecution
+2025-07-17 20:46:30 [INFO] Executing Step 7: ResultValidation
+2025-07-17 20:46:30 [INFO] Answer: {'type': 'plot', 'value': '/Users/courtashdale/Desktop/Developer/Learning/streamlit-ai/exports/charts/temp_chart.png'}
+2025-07-17 20:46:30 [INFO] Executing Step 8: ResultParsing
+2025-07-17 21:21:22 [INFO] Question: How many people died in total?
+2025-07-17 21:21:22 [INFO] Running PandasAI with openai LLM...
+2025-07-17 21:21:22 [INFO] Prompt ID: fd4e9e99-53b0-40fc-8f65-f2910c4339de
+2025-07-17 21:21:22 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-07-17 21:21:22 [INFO] Executing Step 0: ValidatePipelineInput
+2025-07-17 21:21:22 [INFO] Executing Step 1: CacheLookup
+2025-07-17 21:21:22 [INFO] Executing Step 2: PromptGeneration
+2025-07-17 21:21:22 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+241,0,2,"Moor, Master. Meier",female,40.0,0,2,347743,7.2292,B102,C
+785,0,3,"Kelly, Mr. James",male,,3,6,PC 17477,61.175,,Q
+804,1,1,"Ryan, Mr. Patrick",male,41.0,8,1,244367,12.275,E44,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ How many people died in total?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-07-17 21:21:22 [INFO] Executing Step 3: CodeGenerator
+2025-07-17 21:21:27 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 21:21:28 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+241,0,2,"Moor, Master. Meier",female,40.0,0,2,347743,7.2292,B102,C
+785,0,3,"Kelly, Mr. James",male,,3,6,PC 17477,61.175,,Q
+804,1,1,"Ryan, Mr. Patrick",male,41.0,8,1,244367,12.275,E44,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ How many people died in total?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-07-17 21:21:28 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Assuming dfs is already defined and contains the DataFrame(s)
+# For this example, we will work with the first DataFrame in the list
+df = dfs[0]
+
+# Calculate the total number of people who died
+total_died = df['Survived'].value_counts().get(0, 0)
+
+# Declare result var: 
+result = {
+    "type": "number",
+    "value": total_died
+}
+            ```
+            
+2025-07-17 21:21:28 [INFO] Executing Step 4: CachePopulation
+2025-07-17 21:21:28 [INFO] Executing Step 5: CodeCleaning
+2025-07-17 21:21:28 [INFO] 
+Code running:
+```
+df = dfs[0]
+total_died = df['Survived'].value_counts().get(0, 0)
+result = {'type': 'number', 'value': total_died}
+        ```
+2025-07-17 21:21:28 [INFO] Executing Step 6: CodeExecution
+2025-07-17 21:21:28 [INFO] Executing Step 7: ResultValidation
+2025-07-17 21:21:28 [INFO] Answer: {'type': 'number', 'value': 549}
+2025-07-17 21:21:28 [INFO] Executing Step 8: ResultParsing
+2025-07-17 21:31:30 [INFO] Question: Give me a summary of this data set
+2025-07-17 21:31:30 [INFO] Running PandasAI with openai LLM...
+2025-07-17 21:31:30 [INFO] Prompt ID: 1258bfa9-1812-4281-a1df-0ae7c6af98df
+2025-07-17 21:31:30 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-07-17 21:31:30 [INFO] Executing Step 0: ValidatePipelineInput
+2025-07-17 21:31:30 [INFO] Executing Step 1: CacheLookup
+2025-07-17 21:31:30 [INFO] Executing Step 2: PromptGeneration
+2025-07-17 21:31:30 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+536,1,1,"Chapman, Mr. John Henry",male,6.0,5,2,370369,16.0,C126,
+342,1,3,"Mockler, Miss. Helen Mary ""Ellie""",male,30.5,1,5,2649,25.9292,,S
+862,0,2,"Ridsdale, Miss. Lucy",female,,8,6,233639,8.7125,D49,C
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Give me a summary of this data set
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-07-17 21:31:30 [INFO] Executing Step 3: CodeGenerator
+2025-07-17 21:31:37 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 21:31:37 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+536,1,1,"Chapman, Mr. John Henry",male,6.0,5,2,370369,16.0,C126,
+342,1,3,"Mockler, Miss. Helen Mary ""Ellie""",male,30.5,1,5,2649,25.9292,,S
+862,0,2,"Ridsdale, Miss. Lucy",female,,8,6,233639,8.7125,D49,C
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Give me a summary of this data set
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-07-17 21:31:37 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import numpy as np
+
+# Assuming dfs is already declared and contains the DataFrame
+df = dfs[0]
+
+# Summary of the dataset
+total_passengers = df.shape[0]
+survived_count = df['Survived'].sum()
+survival_rate = survived_count / total_passengers * 100
+average_age = df['Age'].mean()
+class_distribution = df['Pclass'].value_counts()
+gender_distribution = df['Sex'].value_counts()
+
+# Create a summary dictionary
+summary = {
+    "Total Passengers": total_passengers,
+    "Survived Count": survived_count,
+    "Survival Rate (%)": survival_rate,
+    "Average Age": average_age,
+    "Class Distribution": class_distribution.to_dict(),
+    "Gender Distribution": gender_distribution.to_dict()
+}
+
+# Declare result var: 
+result = {
+    "type": "string",
+    "value": f"Summary of the dataset:\n"
+             f"Total Passengers: {summary['Total Passengers']}\n"
+             f"Survived Count: {summary['Survived Count']}\n"
+             f"Survival Rate: {summary['Survival Rate (%)']:.2f}%\n"
+             f"Average Age: {summary['Average Age']:.2f}\n"
+             f"Class Distribution: {summary['Class Distribution']}\n"
+             f"Gender Distribution: {summary['Gender Distribution']}"
+}
+            ```
+            
+2025-07-17 21:31:37 [INFO] Executing Step 4: CachePopulation
+2025-07-17 21:31:37 [INFO] Executing Step 5: CodeCleaning
+2025-07-17 21:31:37 [INFO] 
+Code running:
+```
+df = dfs[0]
+total_passengers = df.shape[0]
+survived_count = df['Survived'].sum()
+survival_rate = survived_count / total_passengers * 100
+average_age = df['Age'].mean()
+class_distribution = df['Pclass'].value_counts()
+gender_distribution = df['Sex'].value_counts()
+summary = {'Total Passengers': total_passengers, 'Survived Count': survived_count, 'Survival Rate (%)': survival_rate, 'Average Age': average_age, 'Class Distribution': class_distribution.to_dict(), 'Gender Distribution': gender_distribution.to_dict()}
+result = {'type': 'string', 'value': f"""Summary of the dataset:
+Total Passengers: {summary['Total Passengers']}
+Survived Count: {summary['Survived Count']}
+Survival Rate: {summary['Survival Rate (%)']:.2f}%
+Average Age: {summary['Average Age']:.2f}
+Class Distribution: {summary['Class Distribution']}
+Gender Distribution: {summary['Gender Distribution']}"""}
+        ```
+2025-07-17 21:31:37 [INFO] Executing Step 6: CodeExecution
+2025-07-17 21:31:37 [INFO] Executing Step 7: ResultValidation
+2025-07-17 21:31:37 [INFO] Answer: {'type': 'string', 'value': "Summary of the dataset:\nTotal Passengers: 891\nSurvived Count: 342\nSurvival Rate: 38.38%\nAverage Age: 29.70\nClass Distribution: {3: 491, 1: 216, 2: 184}\nGender Distribution: {'male': 577, 'female': 314}"}
+2025-07-17 21:31:37 [INFO] Executing Step 8: ResultParsing
+2025-07-17 21:35:52 [INFO] Question: Show me a histogram of the most popular genres
+2025-07-17 21:35:52 [INFO] Running PandasAI with openai LLM...
+2025-07-17 21:35:52 [INFO] Prompt ID: ff412efc-b9f9-4ba2-a9be-4df9c8d7392d
+2025-07-17 21:35:52 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-07-17 21:35:52 [INFO] Executing Step 0: ValidatePipelineInput
+2025-07-17 21:35:52 [INFO] Executing Step 1: CacheLookup
+2025-07-17 21:35:52 [INFO] Executing Step 2: PromptGeneration
+2025-07-17 21:35:52 [INFO] Using prompt: <dataframe>
+dfs[0]:5000x9
+Ranking,Album,Artist Name,Release Date,Genres,Descriptors,Average Rating,Number of Ratings,Number of Reviews
+4916.0,Presenting The Fabulous Ronettes Featuring Veronica,Helen Merrill,1960,"Musique concrète, Modern Classical, Electronic","mellow, female vocals, energetic, passionate, playful, bittersweet, happy, peaceful",3.59,"4,321",225
+2320.0,Skeleton in Armour,Jorge Ben,August 1958,"Free Jazz, Post-Bop, Avant-Garde Jazz",,3.72,"4,349",582
+4518.0,Symphony No. 9,Flotsam and Jetsam,22 July 2020,"Dream Pop, Indie Rock","crime, urban, protest, angry, aggressive, violence, rebellious, male vocals, vulgar, energetic",4.12,"16,711",240
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show me a histogram of the most popular genres
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-07-17 21:35:52 [INFO] Executing Step 3: CodeGenerator
+2025-07-17 21:36:00 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 21:36:00 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:5000x9
+Ranking,Album,Artist Name,Release Date,Genres,Descriptors,Average Rating,Number of Ratings,Number of Reviews
+4916.0,Presenting The Fabulous Ronettes Featuring Veronica,Helen Merrill,1960,"Musique concrète, Modern Classical, Electronic","mellow, female vocals, energetic, passionate, playful, bittersweet, happy, peaceful",3.59,"4,321",225
+2320.0,Skeleton in Armour,Jorge Ben,August 1958,"Free Jazz, Post-Bop, Avant-Garde Jazz",,3.72,"4,349",582
+4518.0,Symphony No. 9,Flotsam and Jetsam,22 July 2020,"Dream Pop, Indie Rock","crime, urban, protest, angry, aggressive, violence, rebellious, male vocals, vulgar, energetic",4.12,"16,711",240
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show me a histogram of the most popular genres
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-07-17 21:36:00 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs is already declared and contains the DataFrame
+# Concatenate all DataFrames in the list if there are multiple
+df = pd.concat(dfs, ignore_index=True)
+
+# Split the genres into separate rows
+genres_series = df['Genres'].str.split(', ').explode()
+
+# Count the occurrences of each genre
+genre_counts = genres_series.value_counts()
+
+# Create a histogram (bar chart) of the most popular genres
+plt.figure(figsize=(10, 6))
+genre_counts.plot(kind='bar', color='skyblue')
+plt.title('Most Popular Genres')
+plt.xlabel('Genres')
+plt.ylabel('Number of Albums')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+
+# Save the plot as a PNG file
+plt.savefig('most_popular_genres_histogram.png')
+
+# Declare result var
+result = {
+    "type": "plot",
+    "value": "most_popular_genres_histogram.png"
+}
+            ```
+            
+2025-07-17 21:36:00 [INFO] Executing Step 4: CachePopulation
+2025-07-17 21:36:00 [INFO] Executing Step 5: CodeCleaning
+2025-07-17 21:36:00 [INFO] Saving charts to /Users/courtashdale/Desktop/Developer/Learning/streamlit-ai/exports/charts/temp_chart.png
+2025-07-17 21:36:00 [INFO] 
+Code running:
+```
+df = pd.concat(dfs, ignore_index=True)
+genres_series = df['Genres'].str.split(', ').explode()
+genre_counts = genres_series.value_counts()
+plt.figure(figsize=(10, 6))
+genre_counts.plot(kind='bar', color='skyblue')
+plt.title('Most Popular Genres')
+plt.xlabel('Genres')
+plt.ylabel('Number of Albums')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+plt.savefig('/Users/courtashdale/Desktop/Developer/Learning/streamlit-ai/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/courtashdale/Desktop/Developer/Learning/streamlit-ai/exports/charts/temp_chart.png'}
+        ```
+2025-07-17 21:36:00 [INFO] Executing Step 6: CodeExecution
+2025-07-17 21:36:01 [INFO] Executing Step 7: ResultValidation
+2025-07-17 21:36:01 [INFO] Answer: {'type': 'plot', 'value': '/Users/courtashdale/Desktop/Developer/Learning/streamlit-ai/exports/charts/temp_chart.png'}
+2025-07-17 21:36:01 [INFO] Executing Step 8: ResultParsing
+2025-07-17 21:36:13 [INFO] Question: Show me a histogram of the top 10 most popular genres
+2025-07-17 21:36:13 [INFO] Running PandasAI with openai LLM...
+2025-07-17 21:36:13 [INFO] Prompt ID: de786a67-d76f-49b2-b902-934c4d663607
+2025-07-17 21:36:13 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-07-17 21:36:13 [INFO] Executing Step 0: ValidatePipelineInput
+2025-07-17 21:36:13 [INFO] Executing Step 1: CacheLookup
+2025-07-17 21:36:13 [INFO] Executing Step 2: PromptGeneration
+2025-07-17 21:36:13 [INFO] Using prompt: <dataframe>
+dfs[0]:5000x9
+Ranking,Album,Artist Name,Release Date,Genres,Descriptors,Average Rating,Number of Ratings,Number of Reviews
+2620.0,Estudando o samba,Scald,25 September 1989,"Free Jazz, Experimental Big Band","surreal, cryptic, energetic, male vocals, raw, sarcastic, aggressive, rhythmic, repetitive",3.65,418,492
+1640.0,Vol. 2: Shake Sugaree,Univers Zéro,24 March 2015,"Alternative Metal, Nu Metal","instrumental, technical, acoustic, improvisation, playful, complex, energetic, passionate",3.78,"4,828",341
+1699.0,Aladdin Sane,Ben Folds,2 February 2001,"Art Rock, Pop Rock, Rock",,3.54,"1,365",13
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show me a histogram of the top 10 most popular genres
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-07-17 21:36:13 [INFO] Executing Step 3: CodeGenerator
+2025-07-17 21:36:23 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 21:36:23 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:5000x9
+Ranking,Album,Artist Name,Release Date,Genres,Descriptors,Average Rating,Number of Ratings,Number of Reviews
+2620.0,Estudando o samba,Scald,25 September 1989,"Free Jazz, Experimental Big Band","surreal, cryptic, energetic, male vocals, raw, sarcastic, aggressive, rhythmic, repetitive",3.65,418,492
+1640.0,Vol. 2: Shake Sugaree,Univers Zéro,24 March 2015,"Alternative Metal, Nu Metal","instrumental, technical, acoustic, improvisation, playful, complex, energetic, passionate",3.78,"4,828",341
+1699.0,Aladdin Sane,Ben Folds,2 February 2001,"Art Rock, Pop Rock, Rock",,3.54,"1,365",13
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show me a histogram of the top 10 most popular genres
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-07-17 21:36:23 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+from collections import Counter
+
+# Assuming dfs is already defined and contains the DataFrame
+# Combine all genres into a single list
+all_genres = []
+
+for df in dfs:
+    # Split genres by comma and strip whitespace, then extend the all_genres list
+    genres = df['Genres'].dropna().str.split(',').explode().str.strip()
+    all_genres.extend(genres)
+
+# Count the occurrences of each genre
+genre_counts = Counter(all_genres)
+
+# Get the top 10 most common genres
+top_genres = genre_counts.most_common(10)
+
+# Prepare data for plotting
+genres, counts = zip(*top_genres)
+
+# Create a histogram (bar chart)
+plt.figure(figsize=(10, 6))
+plt.bar(genres, counts, color='skyblue')
+plt.title('Top 10 Most Popular Genres')
+plt.xlabel('Genres')
+plt.ylabel('Number of Albums')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+
+# Save the plot as a PNG file
+plt.savefig('top_genres_histogram.png')
+
+# Declare result var: 
+result = {
+    "type": "plot",
+    "value": "top_genres_histogram.png"
+}
+            ```
+            
+2025-07-17 21:36:23 [INFO] Executing Step 4: CachePopulation
+2025-07-17 21:36:23 [INFO] Executing Step 5: CodeCleaning
+2025-07-17 21:36:23 [INFO] Saving charts to /Users/courtashdale/Desktop/Developer/Learning/streamlit-ai/exports/charts/temp_chart.png
+2025-07-17 21:36:23 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-07-17 21:36:23 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-07-17 21:36:23 [INFO] Using prompt: <dataframe>
+dfs[0]:5000x9
+Ranking,Album,Artist Name,Release Date,Genres,Descriptors,Average Rating,Number of Ratings,Number of Reviews
+2620.0,Estudando o samba,Scald,25 September 1989,"Free Jazz, Experimental Big Band","surreal, cryptic, energetic, male vocals, raw, sarcastic, aggressive, rhythmic, repetitive",3.65,418,492
+1640.0,Vol. 2: Shake Sugaree,Univers Zéro,24 March 2015,"Alternative Metal, Nu Metal","instrumental, technical, acoustic, improvisation, playful, complex, energetic, passionate",3.78,"4,828",341
+1699.0,Aladdin Sane,Ben Folds,2 February 2001,"Art Rock, Pop Rock, Rock",,3.54,"1,365",13
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Show me a histogram of the top 10 most popular genres
+
+You generated this python code:
+# TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+from collections import Counter
+
+# Assuming dfs is already defined and contains the DataFrame
+# Combine all genres into a single list
+all_genres = []
+
+for df in dfs:
+    # Split genres by comma and strip whitespace, then extend the all_genres list
+    genres = df['Genres'].dropna().str.split(',').explode().str.strip()
+    all_genres.extend(genres)
+
+# Count the occurrences of each genre
+genre_counts = Counter(all_genres)
+
+# Get the top 10 most common genres
+top_genres = genre_counts.most_common(10)
+
+# Prepare data for plotting
+genres, counts = zip(*top_genres)
+
+# Create a histogram (bar chart)
+plt.figure(figsize=(10, 6))
+plt.bar(genres, counts, color='skyblue')
+plt.title('Top 10 Most Popular Genres')
+plt.xlabel('Genres')
+plt.ylabel('Number of Albums')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+
+# Save the plot as a PNG file
+plt.savefig('top_genres_histogram.png')
+
+# Declare result var: 
+result = {
+    "type": "plot",
+    "value": "top_genres_histogram.png"
+}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "/Users/courtashdale/.pyenv/versions/3.11.9/lib/python3.11/site-packages/pandasai/pipelines/chat/code_cleaning.py", line 95, in execute
+    code_to_run = self.get_code_to_run(input, code_context)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/courtashdale/.pyenv/versions/3.11.9/lib/python3.11/site-packages/pandasai/pipelines/chat/code_cleaning.py", line 152, in get_code_to_run
+    code_to_run = self._clean_code(code, context)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/courtashdale/.pyenv/versions/3.11.9/lib/python3.11/site-packages/pandasai/pipelines/chat/code_cleaning.py", line 490, in _clean_code
+    self._check_imports(node)
+  File "/Users/courtashdale/.pyenv/versions/3.11.9/lib/python3.11/site-packages/pandasai/pipelines/chat/code_cleaning.py", line 588, in _check_imports
+    raise BadImportError(library)
+pandasai.exceptions.BadImportError: Generated code includes import of collections which is not in whitelist.
+
+
+Fix the python code above and return the new python code:
+2025-07-17 21:36:23 [INFO] Executing Step 1: CodeGenerator
+2025-07-17 21:36:30 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 21:36:30 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:5000x9
+Ranking,Album,Artist Name,Release Date,Genres,Descriptors,Average Rating,Number of Ratings,Number of Reviews
+2620.0,Estudando o samba,Scald,25 September 1989,"Free Jazz, Experimental Big Band","surreal, cryptic, energetic, male vocals, raw, sarcastic, aggressive, rhythmic, repetitive",3.65,418,492
+1640.0,Vol. 2: Shake Sugaree,Univers Zéro,24 March 2015,"Alternative Metal, Nu Metal","instrumental, technical, acoustic, improvisation, playful, complex, energetic, passionate",3.78,"4,828",341
+1699.0,Aladdin Sane,Ben Folds,2 February 2001,"Art Rock, Pop Rock, Rock",,3.54,"1,365",13
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Show me a histogram of the top 10 most popular genres
+
+You generated this python code:
+# TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+from collections import Counter
+
+# Assuming dfs is already defined and contains the DataFrame
+# Combine all genres into a single list
+all_genres = []
+
+for df in dfs:
+    # Split genres by comma and strip whitespace, then extend the all_genres list
+    genres = df['Genres'].dropna().str.split(',').explode().str.strip()
+    all_genres.extend(genres)
+
+# Count the occurrences of each genre
+genre_counts = Counter(all_genres)
+
+# Get the top 10 most common genres
+top_genres = genre_counts.most_common(10)
+
+# Prepare data for plotting
+genres, counts = zip(*top_genres)
+
+# Create a histogram (bar chart)
+plt.figure(figsize=(10, 6))
+plt.bar(genres, counts, color='skyblue')
+plt.title('Top 10 Most Popular Genres')
+plt.xlabel('Genres')
+plt.ylabel('Number of Albums')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+
+# Save the plot as a PNG file
+plt.savefig('top_genres_histogram.png')
+
+# Declare result var: 
+result = {
+    "type": "plot",
+    "value": "top_genres_histogram.png"
+}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "/Users/courtashdale/.pyenv/versions/3.11.9/lib/python3.11/site-packages/pandasai/pipelines/chat/code_cleaning.py", line 95, in execute
+    code_to_run = self.get_code_to_run(input, code_context)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/courtashdale/.pyenv/versions/3.11.9/lib/python3.11/site-packages/pandasai/pipelines/chat/code_cleaning.py", line 152, in get_code_to_run
+    code_to_run = self._clean_code(code, context)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/courtashdale/.pyenv/versions/3.11.9/lib/python3.11/site-packages/pandasai/pipelines/chat/code_cleaning.py", line 490, in _clean_code
+    self._check_imports(node)
+  File "/Users/courtashdale/.pyenv/versions/3.11.9/lib/python3.11/site-packages/pandasai/pipelines/chat/code_cleaning.py", line 588, in _check_imports
+    raise BadImportError(library)
+pandasai.exceptions.BadImportError: Generated code includes import of collections which is not in whitelist.
+
+
+Fix the python code above and return the new python code:
+            
+2025-07-17 21:36:30 [INFO] Code generated:
+            ```
+            # Import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs is already defined and contains the DataFrame
+# Combine all genres into a single list
+all_genres = []
+
+for df in dfs:
+    # Split genres by comma and strip whitespace, then extend the all_genres list
+    genres = df['Genres'].dropna().str.split(',').explode().str.strip()
+    all_genres.extend(genres)
+
+# Create a DataFrame from the list of all genres
+genres_df = pd.DataFrame(all_genres, columns=['Genre'])
+
+# Count the occurrences of each genre
+genre_counts = genres_df['Genre'].value_counts()
+
+# Get the top 10 most common genres
+top_genres = genre_counts.head(10)
+
+# Prepare data for plotting
+genres, counts = top_genres.index, top_genres.values
+
+# Create a histogram (bar chart)
+plt.figure(figsize=(10, 6))
+plt.bar(genres, counts, color='skyblue')
+plt.title('Top 10 Most Popular Genres')
+plt.xlabel('Genres')
+plt.ylabel('Number of Albums')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+
+# Save the plot as a PNG file
+plt.savefig('top_genres_histogram.png')
+
+# Declare result var: 
+result = {
+    "type": "plot",
+    "value": "top_genres_histogram.png"
+}
+            ```
+            
+2025-07-17 21:36:30 [INFO] Executing Step 2: CodeCleaning
+2025-07-17 21:36:30 [INFO] Saving charts to /Users/courtashdale/Desktop/Developer/Learning/streamlit-ai/exports/charts/temp_chart.png
+2025-07-17 21:36:30 [INFO] 
+Code running:
+```
+all_genres = []
+for df in dfs:
+    genres = df['Genres'].dropna().str.split(',').explode().str.strip()
+    all_genres.extend(genres)
+genres_df = pd.DataFrame(all_genres, columns=['Genre'])
+genre_counts = genres_df['Genre'].value_counts()
+top_genres = genre_counts.head(10)
+genres, counts = top_genres.index, top_genres.values
+plt.figure(figsize=(10, 6))
+plt.bar(genres, counts, color='skyblue')
+plt.title('Top 10 Most Popular Genres')
+plt.xlabel('Genres')
+plt.ylabel('Number of Albums')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+plt.savefig('/Users/courtashdale/Desktop/Developer/Learning/streamlit-ai/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/courtashdale/Desktop/Developer/Learning/streamlit-ai/exports/charts/temp_chart.png'}
+        ```
+2025-07-17 21:36:30 [INFO] Executing Step 6: CodeExecution
+2025-07-17 21:36:30 [INFO] Executing Step 7: ResultValidation
+2025-07-17 21:36:30 [INFO] Answer: {'type': 'plot', 'value': '/Users/courtashdale/Desktop/Developer/Learning/streamlit-ai/exports/charts/temp_chart.png'}
+2025-07-17 21:36:30 [INFO] Executing Step 8: ResultParsing
